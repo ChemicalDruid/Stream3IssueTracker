@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from home import views as home_views
 from accounts import views as accounts_views
+from ua_bugs import views as uabugs_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,4 +27,12 @@ urlpatterns = [
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
     url(r'^pages/', include('django.contrib.flatpages.urls')),
+    url(r'^uabugs/$', uabugs_views.uabugs, name='uabugs'),
+    url(r'^bugs/(?P<subject_id>\d+)/$', uabugs_views.bugs, name='bugs'),
+    url(r'^new_bug/(?P<subject_id>\d+)/$', uabugs_views.new_bug, name='new_bug'),
+    url(r'^bug/(?P<bug_id>\d+)/$', uabugs_views.bug, name='bug'),
+    url(r'^post/new/(?P<bug_id>\d+)/$', uabugs_views.new_post, name='new_post'),
+    url(r'^post/edit/(?P<bug_id>\d+)/(?P<post_id>\d+)/$', uabugs_views.edit_post, name='edit_post'),
+    url(r'^post/delete/(?P<bug_id>\d+)/(?P<post_id>\d+)/$', uabugs_views.delete_post, name='delete_post'),
+    url(r'^bug/vote/(?P<bug_id>\d+)/(?P<subject_id>\d+)/$', uabugs_views.bug_vote, name='cast_vote'),
 ]

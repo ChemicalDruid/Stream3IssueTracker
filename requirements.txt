@@ -1,0 +1,6 @@
+django
+django-forms-bootstrap
+arrow
+django-emoticons
+django-tinymce
+django-debug-toolbar
