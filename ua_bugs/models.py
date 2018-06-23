@@ -10,7 +10,7 @@ from django.utils import timezone
 
 
 # Create your models here.
-class Subject(models.Model):
+class BugSubject(models.Model):
     name = models.CharField(max_length=255)
     description = HTMLField()
 
@@ -26,19 +26,19 @@ class UaBug(models.Model):
     )
     name = models.CharField(max_length=255)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='bugs')
-    subject = models.ForeignKey(Subject, related_name='bugs')
+    subject = models.ForeignKey(BugSubject, related_name='bugs')
     created_at = models.DateTimeField(default=timezone.now)
     bug_votes = models.IntegerField(default=0)
     current_status = models.CharField(max_length=5, choices=status, default='tofix')
 
 
-class Post(models.Model):
+class BugPost(models.Model):
     bug = models.ForeignKey(UaBug, related_name='posts')
     comment = HTMLField(blank=True)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='posts')
     created_at = models.DateTimeField(default=timezone.now)
 
 
-class Vote(models.Model):
+class BugVote(models.Model):
     bug = models.ForeignKey(UaBug, related_name='votes')
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='votes')

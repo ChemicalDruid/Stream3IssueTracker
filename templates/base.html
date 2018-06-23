@@ -7,23 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    {% block head_js %}{% endblock head_js %}
 </head>
 <body>
 <div class="container">
     <div class="masthead">
         <ul class="nav nav-pills pull-right">
-            <li><a href="/">Home</a></li>
-            <li><a href="/pages/about">About</a></li>
+            <li><a class="nav-link" href="/">Home</a></li>
+            <li><a class="nav-link" href="/pages/about">About</a></li>
             {% if user.is_authenticated %}
-                <li><a href="{% url 'uabugs' %}">Bugs</a></li>
-                <li><a href="{% url 'profile' %}">Profile</a></li>
-                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                <li><a class="nav-link" href="{% url 'uabugs' %}">Bug Reports</a></li>
+                <li><a class="nav-link" href="{% url 'uafeatures' %}">Feature Requests</a></li>
+                <li><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
+                <li><a class="nav-link" href="{% url 'logout' %}">Log Out</a></li>
             {% else %}
-                <li><a href="{% url 'register' %}">Register</a></li>
-                <li><a href="{% url 'login' %}">Log In</a></li>
+                <li><a class="nav-link" href="{% url 'register' %}">Register</a></li>
+                <li><a class="nav-link" href="{% url 'login' %}">Log In</a></li>
             {% endif %}
-            <li><a href="#">Contact</a></li>
+            <li><a class="nav-link" href="#">Contact</a></li>
         </ul>
         <h1><span class="fui-settings-16 muted">UnicornAttractor Issue Tracker</span></h1>
     </div>
@@ -47,9 +51,8 @@
     </div>
 </div>
 </body>
- 
+
 <!-- script references -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js">
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </html>

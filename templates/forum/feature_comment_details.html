@@ -1,4 +1,4 @@
-{% load uabug_extras %}
+{% load uafeature_extras %}
 <div class="details">
     <div class="col-md-6">
         <div class="pull-left">
@@ -10,8 +10,8 @@
     <div class="col-md-6">
         <div class="pull-right">
             {% if post.user == user or user.is_staff %}
-                <a href="{% url 'edit_post' bug.id post.id %}"><i class="fa fa-pencil-square-o"></i></a>
-                <a href="{% url 'delete_post' bug.id post.id %}"><i class="fa fa-trash-o"></i></a>
+                <a href="{% url 'edit_feature_post' feature.id post.id %}"><i class="fa fa-pencil-alt"></i></a>
+                <a href="{% url 'delete_feature_post' feature.id post.id %}"><i class="fa fa-trash-alt"></i></a>
             {% endif %}
         </div>
     </div>

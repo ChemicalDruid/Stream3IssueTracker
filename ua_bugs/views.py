@@ -5,24 +5,27 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 from django.shortcuts import render, get_object_or_404
-from .models import Subject, UaBug, Post, Vote
+from .models import BugSubject, UaBug, BugPost, BugVote
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.template.context_processors import csrf
 from .forms import UaBugForm, PostForm
-from django.forms import formset_factory 
+from django.forms import formset_factory
+
 
 def uabugs(request):
-   return render(request, 'forum/uabugs.html', {'subjects': Subject.objects.all()})
+    return render(request, 'forum/uabugs.html', {'subjects': BugSubject.objects.all()})
+
 
 def bugs(request, subject_id):
-    subject = get_object_or_404(Subject, pk=subject_id)
+    subject = get_object_or_404(BugSubject, pk=subject_id)
     return render(request, 'forum/bugs.html', {'subject': subject})
- 
+
+
 @login_required
 def new_bug(request, subject_id):
-    subject = get_object_or_404(Subject, pk=subject_id)
+    subject = get_object_or_404(BugSubject, pk=subject_id)
 
     if request.method == "POST":
         bug_form = UaBugForm(request.POST)
@@ -72,7 +75,7 @@ def save_bug(bug_form, post_form, subject, user):
 @login_required
 def new_post(request, bug_id):
     bug = get_object_or_404(UaBug, pk=bug_id)
- 
+
     if request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
@@ -80,69 +83,68 @@ def new_post(request, bug_id):
             post.bug = bug
             post.user = request.user
             post.save()
- 
+
             messages.success(request, "Your post has been added to the bug!")
- 
+
             return redirect(reverse('bug', args={bug.pk}))
     else:
         form = PostForm()
- 
+
     args = {
-        'form' : form,
+        'form': form,
         'form_action': reverse('new_post', args={bug.id}),
-        'button_text': 'Update Post'
+        'button_text': 'Update Bug Post'
     }
     args.update(csrf(request))
- 
+
     return render(request, 'forum/post_form.html', args)
 
 
 @login_required
 def edit_post(request, bug_id, post_id):
-   bug = get_object_or_404(UaBug, pk=bug_id)
-   post = get_object_or_404(Post, pk=post_id)
- 
-   if request.method == "POST":
-       form = PostForm(request.POST, instance=post)
-       if form.is_valid():
-           form.save()
-           messages.success(request, "You have updated your bug!")
- 
-           return redirect(reverse('bug', args={bug.pk}))
-   else:
-       form = PostForm(instance=post)
- 
- 
-   args = {
-       'form' : form,
-       'form_action': reverse('edit_post',  kwargs={"bug_id" : bug.id, "post_id": post.id}),
-       'button_text': 'Update Post'
-   }
-   args.update(csrf(request))
- 
-   return render(request, 'forum/post_form.html', args)
+    bug = get_object_or_404(UaBug, pk=bug_id)
+    post = get_object_or_404(BugPost, pk=post_id)
+
+    if request.method == "POST":
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "You have updated your bug!")
+
+            return redirect(reverse('bug', args={bug.pk}))
+    else:
+        form = PostForm(instance=post)
+
+    args = {
+        'form': form,
+        'form_action': reverse('edit_post', kwargs={"bug_id": bug.id, "post_id": post.id}),
+        'button_text': 'Update Post'
+    }
+    args.update(csrf(request))
+
+    return render(request, 'forum/post_form.html', args)
 
 
 @login_required
 def delete_post(request, bug_id, post_id):
-   post = get_object_or_404(Post, pk=post_id)
-   bug_id = post.bug.id
-   post.delete()
- 
-   messages.success(request, "Your post was deleted!")
- 
-   return redirect(reverse('bug', args={bug_id}))
+    post = get_object_or_404(BugPost, pk=post_id)
+    bug_id = post.bug.id
+    post.delete()
+
+    messages.success(request, "Your post was deleted!")
+
+    return redirect(reverse('bug', args={bug_id}))
 
 
 @login_required
 def bug_vote(request, bug_id, subject_id):
     bug = UaBug.objects.get(id=bug_id)
-    vote = bug.votes.filter(user=request.user) 
+    vote = bug.votes.filter(user=request.user)
     if vote:
-      messages.error(request, "You already voted on this! ... You're not trying to cheat are you?")
-      return redirect(reverse('bug', args={bug_id}))
+        messages.error(request, "You already upvoted this bug!")
+        return redirect(reverse('bug', args={bug_id}))
     else:
-      bug.bug_votes += 1
-      bug.save()
-      Vote.objects.create(bug=bug, user=request.user)  
-      return redirect(reverse('bug', args={bug_id}))
+        bug.bug_votes += 1
+        bug.save()
+        BugVote.objects.create(bug=bug, user=request.user)
+        return redirect(reverse('bug', args={bug_id}))

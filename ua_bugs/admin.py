@@ -2,10 +2,9 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from .models import Subject, UaBug, Post
-
+from .models import BugSubject, UaBug, BugPost
 
 # Register your models here.
-admin.site.register(Subject)
+admin.site.register(BugSubject)
 admin.site.register(UaBug)
-admin.site.register(Post)
+admin.site.register(BugPost)

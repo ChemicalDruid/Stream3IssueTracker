@@ -4,3 +4,4 @@ arrow
 django-emoticons
 django-tinymce
 django-debug-toolbar
+django-paypal==0.3.6

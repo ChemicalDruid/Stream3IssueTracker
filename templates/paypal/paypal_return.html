@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load uafeature_extras %}
+{% block content %}
+    <h1>Thank you for upvoting a feature!</h1>
+    {% autoescape off %}
+        {% vote_tally feature %}
+    {% endautoescape %}
+{% endblock %}

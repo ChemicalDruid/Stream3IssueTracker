@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load uabug_extras %}
+{% load uafeature_extras %}
 {% block content %}
     <div class="row header">
         <div class="jumbotron"><h1>{{ subject.name }}</h1></div>
@@ -7,11 +7,11 @@
     <div class="col-md-12">
         {% if user.is_authenticated %}
             <p>
-                <a href="{% url 'new_bug' subject.id %}" class="btn btn-primary">New Bug</a>
+                <a href="{% url 'new_feature' subject.id %}" class="btn btn-primary">New Feature</a>
             </p>
         {% endif %}
-        {% for bug in subject.bugs.all %}
-            {% include "forum/bug_item.html" %}
+        {% for feature in subject.features.all %}
+            {% include "forum/feature_item.html" %}
         {% endfor %}
     </div>
 {% endblock %}

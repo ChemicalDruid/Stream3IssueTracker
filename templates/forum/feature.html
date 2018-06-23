@@ -1,32 +1,30 @@
 {% extends "base.html" %}
-{% load uabug_extras %}
+{% load uafeature_extras %}
 {% load staticfiles %}
 {% block content %}
 
     <div class="row header">
 
         <div class="container">
-            <h2>{{ bug.name }}</h2>
+            <h2>{{ feature.name }}</h2>
             <div class="col-md-12">
                 <table class="table">
                     <tbody>
                     <tr>
-                        <th>
-                            CREATED
-                        </th>
+                        <th>CREATED</th>
                         <th>OWNER</th>
                         <th>LAST POST</th>
                         <th>STATUS</th>
                     </tr>
                     <tr>
                         <td>
-                            <time datetime="{{ bug.created_at }}">
-                                {{ bug.created_at|started_time }}
+                            <time datetime="{{ feature.created_at }}">
+                                {{ feature.created_at|started_time }}
                             </time>
                         </td>
-                        <td>{{ bug.user.username }}</td>
-                        <td>{% last_posted_user_name bug %}</td>
-                        <td>{{ bug.current_status }}</td>
+                        <td>{{ feature.user.username }}</td>
+                        <td>{% last_posted_user_name feature %}</td>
+                        <td>{{ feature.current_status }}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -34,13 +32,13 @@
             <div class="container">
                 <div class="col-md-6">
                     <h2>Upvote</h2>
-
+                    {{ feature.paypal_form.sandbox }}
                     <div class="col-md-10">
-                        <span class="pull-right">Votes: {{ bug.bug_votes }}</span>
+                        <span class="pull-right">Votes: {{ feature.feature_votes_count }}</span>
                     </div>
 
                     {% autoescape off %}
-                        {% user_vote_button bug bug user %}
+                        {% user_vote_button feature feature user %}
                     {% endautoescape %}
 
                 </div>
@@ -51,14 +49,14 @@
 
         {% if user.is_authenticated %}
             <p>
-                <a href="{% url 'new_post' bug.id %}" class="btn btn-primary">New Bug Post</a>
+                <a href="{% url 'new_feature_post' feature.id %}" class="btn btn-primary">New Post</a>
             </p>
         {% endif %}
     </div>
     </div>
     <div class="container">
-        {% for post in bug.posts.all %}
-            {% include "forum/post.html" %}
+        {% for post in feature.feature_posts.all %}
+            {% include "forum/feature_post.html" %}
         {% endfor %}
     </div>
 {% endblock %}

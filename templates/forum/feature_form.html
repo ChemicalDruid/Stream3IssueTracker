@@ -18,13 +18,13 @@
 {% block content %}
     <section>
         <div class="col-md-9">
-            <form method="post" action="{% url 'new_bug' subject.id %}">
+            <form method="post" action="{% url 'new_feature' subject.id %}">
                 {% csrf_token %}
-                {{ bug_form | as_bootstrap }}
+                {{ feature_form | as_bootstrap }}
                 <hr>
                 {{ post_form | as_bootstrap }}
                 <div class="form-group">
-                    <button type="submit" class="btn-primary">Post New Bug</button>
+                    <button type="submit" class="btn-primary">Post New Feature</button>
                 </div>
             </form>
         </div>
