@@ -1,0 +1,554 @@
+[
+{
+    "model": "sessions.session",
+    "pk": "9ypvaofyqnl6szjmiccwnm7dag09fih5",
+    "fields": {
+        "session_data": "MmU4YzJkNWEwNGFmY2M2MDI2ZTlkMTA2MTI1Njg3ODBlOGFiNDQ4Mjp7Il9hdXRoX3VzZXJfaGFzaCI6IjM4Zjk0ZmEwNjAzMGQ2N2EzODk1ZDAzYzc2MzZhMmU3NzdiYjlmY2EiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiMSJ9",
+        "expire_date": "2018-07-07T07:31:55.162Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "dbn95mgtg2tc7nydr1ak0vbdqn8ty7z3",
+    "fields": {
+        "session_data": "MmU4YzJkNWEwNGFmY2M2MDI2ZTlkMTA2MTI1Njg3ODBlOGFiNDQ4Mjp7Il9hdXRoX3VzZXJfaGFzaCI6IjM4Zjk0ZmEwNjAzMGQ2N2EzODk1ZDAzYzc2MzZhMmU3NzdiYjlmY2EiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhY2NvdW50cy5iYWNrZW5kcy5FbWFpbEF1dGgiLCJfYXV0aF91c2VyX2lkIjoiMSJ9",
+        "expire_date": "2018-07-07T08:15:42.407Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "m5nluhhzhtm8n63utj20u4qv4p6gi2bq",
+    "fields": {
+        "session_data": "YzIyMTRhMjdhZDc5MGI1OTFlNjRhYWQ4MTNmMWM1OTc1ZmVjNjQ4ODp7Il9hdXRoX3VzZXJfaGFzaCI6IjZkNmY4OWRkYjMwN2I2ZTc2OWYwNDFkZDJkZWYyZjgwNzk2ZTllOWEiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIzIn0=",
+        "expire_date": "2018-07-01T16:35:36.779Z"
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$mSGWkueMzx44$cborpk+GJlWRdLChbBR6AikEXPlueIQqo90ZLkwWAeM=",
+        "last_login": "2018-06-23T08:15:42.385Z",
+        "is_superuser": false,
+        "username": "tester1@test.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "tester1@test.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2018-06-16T09:09:52.315Z",
+        "previous_login": "2018-06-22T23:58:09.678Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$6fHf5M9D5FSw$XBq10B3yYW/68dOZNQAbWEfObJYT/hXm9RsFWE+MOkI=",
+        "last_login": "2018-06-16T10:59:36.338Z",
+        "is_superuser": false,
+        "username": "tester2@test.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "tester2@test.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2018-06-16T09:11:11.744Z",
+        "previous_login": "2018-06-16T10:59:47.240Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$XDbiB9nJuVxc$xFD6pPxDLUAX/e0Z1e1cYPZi5iZm5LG6rm5YA9sn3vw=",
+        "last_login": "2018-06-22T23:58:21.433Z",
+        "is_superuser": true,
+        "username": "admin@test.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@test.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2018-06-17T07:54:53.984Z",
+        "previous_login": "2018-06-23T07:31:45.257Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+        "domain": "example.com",
+        "name": "example.com"
+    }
+},
+{
+    "model": "sites.site",
+    "pk": 2,
+    "fields": {
+        "domain": "localhost",
+        "name": "localhost"
+    }
+},
+{
+    "model": "flatpages.flatpage",
+    "pk": 1,
+    "fields": {
+        "url": "/pages/about/",
+        "title": "About Issue Tracker",
+        "content": "This website is dedicated to creating a  system for tracking bug fixes and feature development for the UnicornAttractor app. Bug fixes and existing features are provided free of charge, while new features are added according to user upvoting via online payments.",
+        "enable_comments": false,
+        "template_name": "",
+        "registration_required": false,
+        "sites": [
+            [
+                "localhost"
+            ]
+        ]
+    }
+},
+{
+    "model": "ua_bugs.bugsubject",
+    "pk": 1,
+    "fields": {
+        "name": "Forms",
+        "description": "<p>Related to forms.</p>"
+    }
+},
+{
+    "model": "ua_bugs.uabug",
+    "pk": 3,
+    "fields": {
+        "name": "cannot report bugs",
+        "user": [
+            "tester1@test.com"
+        ],
+        "subject": 1,
+        "created_at": "2018-06-22T23:13:02Z",
+        "bug_votes": 2,
+        "current_status": "tofix"
+    }
+},
+{
+    "model": "ua_bugs.bugpost",
+    "pk": 5,
+    "fields": {
+        "bug": 3,
+        "comment": "<p>What gives?</p>",
+        "user": [
+            "tester1@test.com"
+        ],
+        "created_at": "2018-06-22T23:13:28Z"
+    }
+},
+{
+    "model": "ua_bugs.bugpost",
+    "pk": 6,
+    "fields": {
+        "bug": 3,
+        "comment": "What's the problem, people?",
+        "user": [
+            "admin@test.com"
+        ],
+        "created_at": "2018-06-22T23:36:39.207Z"
+    }
+},
+{
+    "model": "ua_bugs.bugvote",
+    "pk": 3,
+    "fields": {
+        "bug": 3,
+        "user": [
+            "admin@test.com"
+        ]
+    }
+},
+{
+    "model": "ua_features.subject",
+    "pk": 1,
+    "fields": {
+        "name": "Unicorn food",
+        "description": "<p>Something to entice unicorns with.</p>"
+    }
+},
+{
+    "model": "ua_features.uafeature",
+    "pk": 1,
+    "fields": {
+        "name": "Hay for unicorns",
+        "user": [
+            "tester1@test.com"
+        ],
+        "subject": 1,
+        "created_at": "2018-06-22T22:47:16Z",
+        "feature_votes_count": 1,
+        "current_status": "toadd",
+        "price": "5.00"
+    }
+},
+{
+    "model": "ua_features.uafeature",
+    "pk": 2,
+    "fields": {
+        "name": "rainbow generator",
+        "user": [
+            "tester1@test.com"
+        ],
+        "subject": 1,
+        "created_at": "2018-06-23T07:33:09.715Z",
+        "feature_votes_count": 1,
+        "current_status": "toadd",
+        "price": "5.00"
+    }
+},
+{
+    "model": "ua_features.post",
+    "pk": 1,
+    "fields": {
+        "feature": 1,
+        "comment": "If we don't feed them, they won't come to us!",
+        "user": [
+            "tester1@test.com"
+        ],
+        "created_at": "2018-06-22T22:47:55Z"
+    }
+},
+{
+    "model": "ua_features.post",
+    "pk": 2,
+    "fields": {
+        "feature": 1,
+        "comment": "food! food! food!",
+        "user": [
+            "admin@test.com"
+        ],
+        "created_at": "2018-06-23T07:28:47.059Z"
+    }
+},
+{
+    "model": "ua_features.post",
+    "pk": 3,
+    "fields": {
+        "feature": 2,
+        "comment": "Another attractor for unicorns",
+        "user": [
+            "tester1@test.com"
+        ],
+        "created_at": "2018-06-23T07:33:09.716Z"
+    }
+},
+{
+    "model": "ua_features.vote",
+    "pk": 1,
+    "fields": {
+        "feature": 1,
+        "user": [
+            "admin@test.com"
+        ]
+    }
+},
+{
+    "model": "ua_features.vote",
+    "pk": 2,
+    "fields": {
+        "feature": 2,
+        "user": [
+            "tester1@test.com"
+        ]
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2018-06-17T16:36:36.225Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "object_id": "3",
+        "object_repr": "localhost",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2018-06-17T16:45:19.270Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "flatpages",
+            "flatpage"
+        ],
+        "object_id": "1",
+        "object_repr": "/pages/about/ -- About Issue Tracker",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2018-06-22T20:58:33.946Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "ua_bugs",
+            "bugsubject"
+        ],
+        "object_id": "1",
+        "object_repr": "Forms",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2018-06-22T20:58:44.530Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "ua_bugs",
+            "uabug"
+        ],
+        "object_id": "1",
+        "object_repr": "UaBug object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2018-06-22T21:15:24.250Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "ua_bugs",
+            "bugpost"
+        ],
+        "object_id": "1",
+        "object_repr": "Post object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2018-06-22T22:46:57.148Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "ua_features",
+            "subject"
+        ],
+        "object_id": "1",
+        "object_repr": "Unicorn food",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2018-06-22T22:47:46.540Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "ua_features",
+            "uafeature"
+        ],
+        "object_id": "1",
+        "object_repr": "Hay for unicorns",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2018-06-22T22:48:19.309Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "ua_features",
+            "post"
+        ],
+        "object_id": "1",
+        "object_repr": "Post object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2018-06-22T23:10:35.879Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "ua_bugs",
+            "bugpost"
+        ],
+        "object_id": "2",
+        "object_repr": "BugPost object",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2018-06-22T23:10:35.896Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "ua_bugs",
+            "bugpost"
+        ],
+        "object_id": "1",
+        "object_repr": "BugPost object",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2018-06-22T23:12:20.117Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "ua_bugs",
+            "bugpost"
+        ],
+        "object_id": "4",
+        "object_repr": "BugPost object",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2018-06-22T23:12:20.132Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "ua_bugs",
+            "bugpost"
+        ],
+        "object_id": "3",
+        "object_repr": "BugPost object",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2018-06-22T23:12:50.250Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "ua_bugs",
+            "uabug"
+        ],
+        "object_id": "2",
+        "object_repr": "UaBug object",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2018-06-22T23:12:50.274Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "ua_bugs",
+            "uabug"
+        ],
+        "object_id": "1",
+        "object_repr": "UaBug object",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2018-06-22T23:13:17.536Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "ua_bugs",
+            "uabug"
+        ],
+        "object_id": "3",
+        "object_repr": "UaBug object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2018-06-22T23:13:46.371Z",
+        "user": [
+            "admin@test.com"
+        ],
+        "content_type": [
+            "ua_bugs",
+            "bugpost"
+        ],
+        "object_id": "5",
+        "object_repr": "BugPost object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}
+]
