@@ -9,6 +9,8 @@ I pretend to develop the fictional UnicornAttractor app. As part of my developme
 
 The vast majority of the code base is taken from my Stream 3 work on the we_are_social app, available as a repository in my GitHub page.
 
+PLEASE NOTE: I have worked as a software engineer for a few years before and after the turn of the current millenium (as of 2018) so this course was more of an update to the current development environment for me. Also, I was unemployed when I started this course and became employed about three quarters of the way through, so I apologise if my efforts are not for 100% marks - hopefully I have done enough to pass the course and allow myself to use the knowledge I gained in any software- and non-software-related tasks I delve into.
+
 ## Technologies
 **[Django](https://www.djangoproject.com/)** - Open-source framework for Python applications.
 
