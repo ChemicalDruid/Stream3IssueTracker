@@ -19,7 +19,7 @@ DATABASES = {
 PAYPAL_NOTIFY_URL = 'http://codeinst-issue-tracker.herokuapp.com/a-url-that-is-difficult-to-guess/'
 PAYPAL_RECEIVER_EMAIL = 'sakis.platsas-paypalmerch@gmail.com'
 
-SITE_URL = 'http://codeinst-issue-tracker.herokuapp.com/'
+SITE_URL = 'https://codeinst-issue-tracker.herokuapp.com/'
 ALLOWED_HOSTS.append('codeinst-issue-tracker.herokuapp.com')
 
 # Log DEBUG information to the console
