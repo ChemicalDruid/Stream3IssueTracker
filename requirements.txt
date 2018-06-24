@@ -1,7 +1,1 @@
-django
-django-forms-bootstrap
-arrow
-django-emoticons
-django-tinymce
-django-debug-toolbar
-django-paypal==0.3.6
+-r requirements/staging.txt
