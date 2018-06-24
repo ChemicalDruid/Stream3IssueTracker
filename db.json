@@ -84,8 +84,8 @@
     "model": "sites.site",
     "pk": 1,
     "fields": {
-        "domain": "example.com",
-        "name": "example.com"
+        "domain": "sample.com",
+        "name": "sample.com"
     }
 },
 {
