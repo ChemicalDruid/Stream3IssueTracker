@@ -7,57 +7,42 @@ A user-driven Django-powered website using technologies that I have learned thro
 
 I pretend to develop the fictional UnicornAttractor app. As part of my development process, I allow the free use of my app, provifing free-of-charge bug fixing support, while asking for payment in order to implement suggested features.
 
+The vast majority of the code base is taken from my Stream 3 work on the we_are_social app, available as a repository in my GitHub page.
+
 ## Technologies
-**[Django](http://flask.pocoo.org/)** - Micro-framework for Python applications.
+**[Django](https://www.djangoproject.com/)** - Open-source framework for Python applications.
 
-**[MongoDB](https://www.mongodb.com/)** - Document-oriented (NoSQL) database using JSON-like documents.
-
-**[dc.js](https://github.com/dc-js/dc.js/wiki)** - Multi-dimensional charting library built to work natively with crossfilter and using d3.js for rendering.
-
-**[d3.js](https://d3js.org/)** - JavaScript library for manipulating documents based on data.
-
-**[d3-queue](https://github.com/d3/d3-queue)** - Lightweight asynchronous helper library used to load the donation data from the database and the GeoJSON data from a local file.
-
-**[Crossfilter](https://square.github.io/crossfilter/)** - JavaScript library for exploring large multivariate datasets in the browser. Crossfilter enables easy manipulation of the data so that applied filters can be readily shown across all charts.
+**[flatpages](#)** is an optional Django app allowing for simple, "flat" HTML content stored in a database and managed via Django's admin interface. 
 
 **[Bootstrap](http://getbootstrap.com/)** provides a responsive framework to the application. This was enhanced with media queries and additional code to resize some of the dc.js charts, which are not natively responsive.
 
-**[Dashboards by keen IO](https://keen.github.io/dashboards/)** - Responsive dashboard templates for Bootstrap.
+**[jquery](https://jquery.com/)** - cross-platform JavaScript library designed to simplify the client-side scripting of HTML.
 
-**[Intro.js](http://introjs.com/)** - Used to provide a step-by step guide to the application.
+**[Font Awesome](http://fontawesome.com/)** - font and icon toolkit based on CSS and LESS.
 
-## dc.js Charts
+**[TinyMCE](http://www.tinymce.com/)** - browser-based JavaScript-powered WYSIWYG editor control 
 
-### Total Number of Donations
-Simple number display
+**[WhiteNoise](http://whitenoise.evans.io/en/stable/)** allows your web app to serve its own static files. 
 
-### Total Donations in USD
-Simple number display
+**[MySQL](http://www.mysql.com/)** - open-source RDBMS used for storing model data in Django apps
 
-### Number of Donations over time
-Vertical bar chart
+## Current features
 
-### Poverty Level
-Horizontal bar chart
+### E-mail authhentication model
 
-### Resources Type
-Horizontal bar chart
+### PayPal payments
 
-### Area
-Pie chart
+### Forum for (free) bug reports and (paid) feature requests
 
-### Funding Status
-Donut chart
+## Future features
 
-### Primary Focus Subject
-Pie chart
+### Add actual Contact page
 
-### Grade Range
-Donut chart
+### Add Bug report and Feature request stats
 
-## Testing
-
-Manually tested for responsiveness and compatibility against various configurations.
+### Add blog for site users
 
 ## Hosting
-The application is deployed on the [Heroku](https://blueberry-pie-71801.herokuapp.com/) PAAS (platform as a service) platform using a free dyno and a MongoDB add-on. Config variables are utilised in the Flask framework to automatically switch the application between local development and production modes.
+The application is deployed on the [Heroku](https://codeinst-issue-tracker.herokuapp.com/) PAAS (platform as a service) platform using a free dyno and a MySQL add-on.
+
+The code is maintained on GitHub - search for ChemicalDruid.
